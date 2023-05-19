@@ -1,0 +1,26 @@
+﻿  Communicator.cpp
+C:\Users\משתמש\Desktop\TriviaProject\trivia\Trivia\Communicator.cpp(98,43): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\משתמש\Desktop\TriviaProject\trivia\Trivia\Communicator.cpp(187,69): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\משתמש\Desktop\TriviaProject\trivia\Trivia\Communicator.cpp(193,31): warning C4101: 'e': unreferenced local variable
+  Helper.cpp
+C:\Users\משתמש\Desktop\TriviaProject\trivia\Trivia\Helper.cpp(84,5): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  JsonRequestPacketDeserializer.cpp
+  JsonResponsePacketSerializer.cpp
+  LoggedUser.cpp
+  LoginManager.cpp
+  LoginRequestHandler.cpp
+  Main.cpp
+  MenuRequestHandler.cpp
+  RequestHandlerFactory.cpp
+  Room.cpp
+  RoomAdminRequestHandler.cpp
+  RoomManager.cpp
+  RoomMemberRequestHandler.cpp
+  Server.cpp
+  SqliteDatabase.cpp
+  StatisticsManager.cpp
+  WSAInitializer.cpp
+  Generating Code...
+C:\Users\משתמש\Desktop\TriviaProject\trivia\Trivia\RoomManager.cpp(58): warning C4715: 'RoomManager::getRoomByName': not all control paths return a value
+  sqlite3.c
+  Trivia.vcxproj -> C:\Users\משתמש\Desktop\TriviaProject\trivia\Trivia\x64\Debug\Trivia.exe

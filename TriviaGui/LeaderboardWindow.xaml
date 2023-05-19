@@ -1,0 +1,44 @@
+﻿<Window x:Class="TriviaWindowsTests.LeaderboardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TriviaWindowsTests"
+        mc:Ignorable="d"
+        Title="LeaderboardWindow" WindowState="Normal" Icon="Logo.png" Closed="windowClosed">
+    <Grid Background="#FF1981FF" RenderTransformOrigin="0.5,0.5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="395*"/>
+            <RowDefinition Height="72*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="275*"/>
+            <ColumnDefinition Width="219*"/>
+            <ColumnDefinition Width="266*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock x:Name="Title" Height="43.844" TextWrapping="Wrap" Text="!!!Trivia Game!!!" VerticalAlignment="Top" TextAlignment="Center" Foreground="White" FontFamily="Showcard Gothic" FontSize="24" HorizontalAlignment="Center" Width="298.024" Grid.ColumnSpan="3" Margin="230.988,0" Grid.RowSpan="2"/>
+        <TextBlock x:Name="UserName" HorizontalAlignment="Left" Height="39.07" Margin="3.997,4.156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="279.976" Background="#FF1981FF" Text="Logged:" FontFamily="Showcard Gothic" Foreground="White" RenderTransformOrigin="0.5,0.5" FontSize="16" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Canvas x:Name="JoinRoom_Canvas" Background="#FF87C7FF" HorizontalAlignment="Center" Width="740" Height="385" VerticalAlignment="Center" Grid.Row="1" Margin="10,0,10,10" Grid.ColumnSpan="3">
+            <TextBlock x:Name="FirstPlace"  Height="130" TextWrapping="Wrap" Width="740" FontFamily="Ravie" FontSize="22" TextAlignment="Center" Foreground="Gold">
+                <TextBlock.Background>
+                    <ImageBrush ImageSource="Confetti.png" Stretch="UniformToFill"/>
+                </TextBlock.Background><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="First:"/></TextBlock>
+            
+            <TextBlock x:Name="SecondPlace" Height="125" TextWrapping="Wrap" Canvas.Top="130" Width="740" FontFamily="Ravie" FontSize="22" TextAlignment="Center" Foreground="Silver">
+                <TextBlock.Background>
+                    <ImageBrush ImageSource="Confetti.png" Stretch="UniformToFill"/>
+                </TextBlock.Background><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="Second:"/></TextBlock>
+            
+            <TextBlock x:Name="ThirdPlace" Height="130" TextWrapping="Wrap" Canvas.Top="255" Width="740" FontFamily="Ravie" FontSize="22" TextAlignment="Center" Foreground="#FFCD7F32">
+                <TextBlock.Background>
+                    <ImageBrush ImageSource="Confetti.png" Stretch="UniformToFill"/>
+                </TextBlock.Background><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="Third:"/></TextBlock>
+
+
+
+        </Canvas>
+        <Button x:Name="Back_Button" Content="Back" Height="48.599" Background="#FF2DFDFD" FontFamily="Ravie" FontSize="22" Width="128.025" Cursor="Hand" Click="BackToMenuWindow" HorizontalAlignment="Left" Margin="0,10.254,0,13.146" Grid.Row="2"/>
+    </Grid>
+</Window>

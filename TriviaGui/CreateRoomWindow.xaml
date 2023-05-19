@@ -1,0 +1,64 @@
+﻿<Window x:Class="TriviaWindowsTests.CreateRoomWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TriviaWindowsTests"
+        mc:Ignorable="d"
+        Title="CreateRoomWindow" WindowState="Normal" Icon="Logo.png" Closed="windowClosed">
+    <Grid Background="#FF1981FF" RenderTransformOrigin="0.5,0.5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="377*"/>
+            <RowDefinition Height="74*"/>
+        </Grid.RowDefinitions>
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="0"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="167*"/>
+            <ColumnDefinition Width="496*"/>
+            <ColumnDefinition Width="122*"/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="Title" Height="43.844" TextWrapping="Wrap" Text="!!!Trivia Game!!!" VerticalAlignment="Top" TextAlignment="Center" Foreground="White" FontFamily="Showcard Gothic" FontSize="24" HorizontalAlignment="Center" Width="298.024" Grid.Column="1" Margin="88.368,0,88.369,0"/>
+
+        <Canvas x:Name="Room_Canvas" Background="#FF87C7FF" Grid.Column="1" HorizontalAlignment="Center" Width="474.761" Height="369.654" VerticalAlignment="Center" Grid.Row="1" Margin="0,1.844,0,5.502">
+
+            <TextBox x:Name="RoomName_Data" Height="26.058" Canvas.Left="86.003" Canvas.Top="45" Width="322.015" MaxLength="20" HorizontalAlignment="Center" TextChanged="CharCounter_1"/>
+
+            <TextBox x:Name="NumberOfPlayers_Box" Height="26.058" Canvas.Left="86.003" Canvas.Top="106.058" Width="322.015" MaxLength = "2" TextChanged="CharCounter_2" PreviewTextInput="NumberValidationTextBox"/>
+            <TextBlock x:Name="RoomName_Title" Height="30" Canvas.Left="159.928" TextWrapping="Wrap" Canvas.Top="10" Width="174.017" TextAlignment="Center" FontFamily="Showcard Gothic" FontSize="20" Text="RoomName:"/>
+            <TextBlock x:Name="NumberOfPlayers_Title" Height="30" Canvas.Left="86.003" TextWrapping="Wrap" Canvas.Top="76.058" Width="322.015" TextAlignment="Center" FontFamily="Showcard Gothic" FontSize="20"><Run Text="number of players:"/><LineBreak/><Run/></TextBlock>
+            <Button x:Name="CreateRoom_Button" Click="CreateRoom" Content="create Room" Height="68.701" Background="#FF2DFDFD" FontFamily="Ravie" FontSize="22" Width="322.015" Cursor="Hand" VerticalAlignment="Bottom" HorizontalAlignment="Center" Canvas.Left="86.003" Canvas.Top="291.455"/>
+            <TextBlock x:Name="NumberOfQuestions_Title" Height="30" Canvas.Left="86.003" TextWrapping="Wrap" Canvas.Top="137.116" Width="322.015" TextAlignment="Center" FontFamily="Showcard Gothic" FontSize="20" Text="Number of questions:"/>
+            <TextBlock x:Name="TimeForQuestion_Title" Height="30" Canvas.Left="86.003" TextWrapping="Wrap" Canvas.Top="203.174" Width="322.015" TextAlignment="Center" FontFamily="Showcard Gothic" FontSize="20" Text="Time for question:"/>
+            <TextBox x:Name="NumberOfQuestions_Box" Height="26.058" Canvas.Left="86.003" Canvas.Top="172.116" Width="322.015" MaxLength = "2" TextChanged="CharCounter_3" PreviewTextInput="NumberValidationTextBox"/>
+            <TextBox x:Name="TimeForQuestion_Box" Height="26.058" Canvas.Left="86.003" Canvas.Top="238.174" Width="322.015" MaxLength = "2" TextChanged="CharCounter_4" PreviewTextInput="NumberValidationTextBox"/>
+
+            <TextBlock x:Name="Counter1" Canvas.Left="374.89" TextWrapping="Wrap" Canvas.Top="50.266"/>
+            <TextBlock x:Name="Counter2" Canvas.Left="374.89" TextWrapping="Wrap" Canvas.Top="111.058"/>
+            <TextBlock x:Name="Counter3" Canvas.Left="374.89" TextWrapping="Wrap" Canvas.Top="177.451"/>
+            <TextBlock x:Name="Counter4" Canvas.Left="374.89" TextWrapping="Wrap" Canvas.Top="243.272"/>
+        </Canvas>
+        <Button x:Name="Back_Button" Content="Back" Height="48.599" Background="#FF2DFDFD" FontFamily="Ravie" FontSize="22" Width="128.025" Cursor="Hand" Click="BackToMenuWindow" Grid.Row = "3" HorizontalAlignment="Left" Margin="0,12.7"/>
+
+        <TextBlock x:Name="UserName" HorizontalAlignment="Left" Height="39.07" Margin="3.997,4.156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="279.976" Background="#FF1981FF" Text="Logged:" FontFamily="Showcard Gothic" Foreground="White" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" FontSize="16">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+
+    </Grid>
+</Window>
